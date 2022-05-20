@@ -1,11 +1,28 @@
 //Selection Sort Program
-//Program is currently under Construction! 
+//SelectionSort implementation method1
 func selectionSort(_ arr :inout [Int]){
     print(arr);
-    arr.swapAt(0,1);
+    let len = arr.count;
+    for i in 0..<len-1{
+        var currEle = arr[i];
+        var currEleReplInd = i+1;
+        var needSwap = false;
+
+        for j in 1+i..<len{
+           if currEle > arr[j]{
+               currEle = arr[j];
+               currEleReplInd = j;
+               needSwap = true;
+           }
+        }
+
+        if needSwap{
+            arr.swapAt(i, currEleReplInd)
+        }
+    }
 }
 
-
+//Main Driver code
 import Foundation
 
 print("Enter the length of the array:");
