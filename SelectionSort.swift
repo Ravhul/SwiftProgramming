@@ -4,9 +4,8 @@
 import Foundation
 
 print("Enter the length of the array:");
-
 var len:Int = 0;
-
+print("Enter \(len) elements of Array:");
 if let input = readLine(){
     if let num = Int(input){
         len = num;
