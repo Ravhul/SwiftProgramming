@@ -1,6 +1,6 @@
 //Selection Sort Program
-//SelectionSort implementation method1
-func selectionSort(_ arr :inout [Int]){
+//SelectionSort implementation method Ascending order
+func selectionSortAsc(_ arr :inout [Int]){
     print(arr);
     let len = arr.count;
     for i in 0..<len-1{
@@ -60,7 +60,7 @@ for var i in 0..<len{
 
 if !isWrongInput{
     print("Input array is:")
-    selectionSort(&array);
-    print("Sorted array is:");
+    selectionSortAsc(&array);
+    print("Sorted array in Ascending order is:");
     print(array);
 }
