@@ -22,6 +22,11 @@ func selectionSortAsc(_ arr :inout [Int]){
     }
 }
 
+//Selection Sort Desc Order
+func selectionSortDesc(_ arr: inout[Int]){
+
+}
+
 //Main Driver code
 import Foundation
 
