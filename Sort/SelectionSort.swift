@@ -25,11 +25,11 @@ func selectionSortAsc(_ arr :inout [Int]){
 //Main Driver code
 import Foundation
 
-print("Enter the length of the array:");
 var len:Int = 0;
 var array : [Int] = [];
 var isWrongInput: Bool = false;
 
+print("Enter the length of the array:");
 if !isWrongInput{
 if let input = readLine(){
     if let num = Int(input){
