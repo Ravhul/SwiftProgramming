@@ -3,6 +3,7 @@
 func selectionSortAsc(_ arr :inout [Int]){
     print(arr);
     let len = arr.count;
+
     for i in 0..<len-1{
         var currEle = arr[i];
         var currEleReplInd = i+1;
@@ -49,7 +50,7 @@ if let input = readLine(){
 
 if !isWrongInput{
 print("Enter \(len) elements of Array:");
-for var i in 0..<len{
+for _ in 0..<len{
     if let input = readLine(){
     if let num = Int(input){
        array.append(num);
