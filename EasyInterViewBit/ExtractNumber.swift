@@ -16,6 +16,8 @@ Output 1:
 46
 
 */
+import Foundation;
+
 class Solution {
 	func solve(_ A: inout String) -> Int64 {
 
@@ -27,11 +29,11 @@ class Solution {
     }
    
     //Separate all numbers by comma ","
-    var num:[String] = A.components(separatedBy:",");
+    let num:[String] = A.components(separatedBy:",");
     var out:Int64 = 0;
 
     //Adding all int elements into output 
-    for var i in num{
+    for i in num{
        out += Int64(i) ?? 0;
     }
     
@@ -43,4 +45,4 @@ class Solution {
 
 var sol = Solution();
 var a = "a12b34c"
-sol.Solution(&a);
+print(sol.solve(&a));
