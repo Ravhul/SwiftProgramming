@@ -22,8 +22,11 @@ class Solution {
 	func solve(_ A: inout String) -> Int64 {
 
     //Code to replace all character into comma ","    
-    let regex1 = try! NSRegularExpression(pattern: "[a-z||A-Z]");
+    let regex1 = 
+    try! NSRegularExpression(pattern: "[a-z||A-Z]");
+
     let range = NSRange(location: 0,length: A.utf16.count);
+
     if regex1.firstMatch(in: A, options: [], range: range) != nil{
         A = regex1.stringByReplacingMatches(in: A, range: range, withTemplate: ",");
     }
