@@ -19,18 +19,21 @@ class LinkedList{
         return Node(data)
     }
 
-    func add(_ data : Int){
-        if self.head == nil{
-            self.head = getNextNode(data);
-        }else{
-            if var temp = self.head{
-                while(temp.next != nil){
-                    if let nxt = temp.next{
-                        temp = nxt;
-                    }
-                }
-                temp.next = getNextNode(data);
+    private func getLastNode() -> Node!{
+        if var node = self.head{
+            while let next = node.next{
+                node = next;
             }
+            return node;
+        }
+        return nil;
+    }
+
+    func add(_ data : Int){
+        if var node = self.getLastNode(){
+            node.next = self.getNextNode(data);
+        }else{
+            self.head = self.getNextNode(data);
         }
     }
 
@@ -39,13 +42,11 @@ class LinkedList{
             print("List is empty");
         }else{
             if var temp = head{
-               while(temp.next != nil){
-                   if let nxt = temp.next{
-                       print(temp.data);
-                       temp = nxt;
-                   }
+                print(temp.data);
+               while let nxt = temp.next{
+                    print(nxt.data);
+                    temp = nxt;
                }
-               print(temp.data);
             }
         }
     }
@@ -53,11 +54,15 @@ class LinkedList{
 
 //Driver code
 var list = LinkedList();
+
 list.add(59);
 list.add(15);
 list.add(16);
 
 list.display();
+
+
+
 
 
 

@@ -1,34 +1,31 @@
-//DataTypes in Swift
-import Foundation;
+import Foundation
 
-//immutable object (Using let keyword).
-let fix:Int = 0;
+let num : Int? = Int(readLine()!);
+var arr1 : [Int] = [];
+var arr2 : [Int] = [];
+var arr1Min = Int.max;
+let aEle : String? = readLine();
+let bEle : String? = readLine();
 
-print("Fix value with let Keyword: \(fix)");
-/*below 9 line will throw an error because we can not change immutable objects.
-fix = 1;
-print(fix);*/
+var a = aEle?.components(separatedBy: " ");
+var b = bEle?.components(separatedBy: " ");
 
-//Mutable object (Using var keyword).
-var notFix:Int = 0;
+if var ele = a{
+    for var eleA in (ele){
+        if var num = (Int(String(eleA))){
+             arr1.append(num);
+        }
+    }
+}
 
-print("Chanageable value with var keyword is: \(notFix)");
-//there will be no error as object is mutable.
-notFix = 1;
-print("var value after changed \(notFix)");
+if var ele = b{
+    for var eleA in (ele){
+        if var num = (Int(String(eleA))){
+             arr2.append(num);
+        }
+    }
+}
 
+print(arr1);
+print(arr2);
 
-//Basic DataTypes Example in Swift.
-var val0:Int = 21;
-var val1:Float = 21.0;
-var val2:Double = 21.2;
-var val3:String = "Twenty one";
-var val4:Character = "A";
-var val5:Bool = false;
-
-print("Int value is:\(val0)");
-print("Float value is:\(val1)");
-print("Double value is:\(val2)");
-print("String value is:\(val3)");
-print("Character value is:\(val4)");
-print("Bool value is:\(val5)");
