@@ -37,6 +37,26 @@ class LinkedList{
         }
     }
 
+    func remove(){
+        if var node = self.head{
+            while var deleteNode = node.next{
+                if deleteNode.next != nil{
+                    node = deleteNode;
+                }else{
+                    break;
+                }
+            }
+            if var nxt = node.next{
+                node.next = nil;
+            }else{
+                self.head = nil;
+            }
+        }
+        else{
+            print("Empty list")
+        }
+    }
+
     func display(){
         if self.head == nil{
             print("List is empty");
@@ -58,8 +78,9 @@ var list = LinkedList();
 list.add(59);
 list.add(15);
 list.add(16);
-
 list.display();
+list.remove();
+
 
 
 
